@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mi primer formulario</h1>
+<!-- Para crear formulario en html existe la etiqueta FORM-->
+<!-- action es el lugar donde va a ir la información de mi formulario-->
+<!-- post : es un tipo de protocolo en el cual va viajar mis datos 
+    cuando tengamos un formulario que contenga datos sensibles este 
+    debe tener el method = "post" y en caso no metohod ="get" -->
+
+<form class="form" action="registro.com" >
+    <fieldset>
+        <legend> Titulo de mi formulario</legend>
+    <!--
+        Forulario de inicio de session
+        Correo , passwword y un boton para enviar los datos
+        cajas INPUT
+        Propiedad de INPUT  -> placeholder 
+    -->
+    <input name ="correo" placeholder="Ingresa un correo" type="email  required "/>
+    <br><br>
+    <input name="password" placeholder="Ingresa una contraseña" type="password" />
+    <br><br>
+    <button type="submit" >Iniciar Sesión</button>
+    </fieldset>
+</form>
+<form>
+    <h1>Formulario de registro</h1>
+    <fieldset>
+        <legend>Ingresa todos tus datos</legend>
+        <!-- label : es un texto que acompaña a nuestro texto -->
+        <label for="nombre" >Nombre</label>
+        <input id="nombre" name="nombre" type="text" 
+        placeholder="Ingrese su nombre"
+        autocomplete="off"
+        autofocus>
+        <br><br>
+        <label for="apellido">Apellido</label>
+        <input id="apellido" name="apellido" type="text" 
+        placeholder="Ingrese su apellido">
+        <br><br>
+        <label for="fecha_nacimiento" >Fecha de Nacimiento</label>
+        <input id="fecha_nacimiento" name="fecha_nacimiento" type="date" 
+        min="2000-01-01"  maxlength="2022-12-01">
+        <br><br>
+        <label for="correo">Correo</label>
+        <input id="correo" name="correo" type="email" 
+        placeholder="Ingrese su email">
+        <br><br>
+        <label for="passowrd">Passowrd</label>
+        <input id="passowrd" name="passowrd" type="passowrd" 
+        placeholder="Ingrese su passowrd">
+        <br><br>
+        <label for="celular">Celular</label>
+        <input id="celular" name="celular" type="number" 
+        placeholder="Celular" maxlength="9">
+        <br><br>
+        <label for="pais">País</label>
+        <select >
+            <option value="" disable selected>Seleccione un pais</option>
+            <option  value ="Peru">Peru </option>
+            <option  value ="Chile">Chile </option>
+            <option  value ="Colombia">Colombia </option>
+            <option  value ="Alemania">Alemania </option>
+            <option  value ="Argentina">Argentina </option>
+            <option  value ="Venezuela ">Venezuela </option>
+            <option  value ="Ecuador">Ecuador </option>
+        </select>
+        <br><br>
+        <label for="terminos">
+            <input id="terminos" name="terminos" required 
+            type="checkbox">Acepta los terminos y condiciones 
+        </label>
+        <br><br>
+        <label for="suscription_1">
+            <input ckecked id="suscription_1" name="suscription"  
+            type="radio">Suscription 1 
+        </label>
+        <label for="suscription_2">
+            <input id="suscription_2" name="suscription" 
+            type="radio">Suscription 2
+        </label>
+        <label for="suscription_3">
+            <input id="suscription_3" name="suscription" 
+            type="radio">Suscription 3
+        </label><<br><br>
+        <!-- textarea : es un input que me permite agregar 
+            mucho texto -->
+        <label for="texto"></label>
+        <textarea id="texto" name="texto" 
+        placeholder="Ingrese un texto sobre usted"
+        rows="20" cols="50" maxlenght="140" ></textarea>
+        <button  type="submit" >Registrarse</button>
+
+    </fieldset>
+    </form>
+</body>
+</html>
+
+<style>
+    body{
+        background-image: url(./img/2.jpg);
+    } 
+    .form ,h1 , legend,  label{
+    color:rgb(255,255,255);
+    text-align: center;
+    }
+    input{
+        padding: 0.7em;
+        border: solid 0.1em white;
+        border-radius:  0.5em;
+    }
+</style>
